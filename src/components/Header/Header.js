@@ -11,23 +11,23 @@ export default function Header() {
             <Container>
                 <Div1>
                     <Link href='/' style={{ display: 'flex', alignItems: 'center', color: 'white', marginBottom: '20' }}>
-                        <DiCssdeck size='3rem' /> <span style={{fontSize: '2rem'}}>Portfolio</span>
+                        <DiCssdeck size='3rem' /> <span style={{fontSize: '2.5rem'}}>Portfolio</span>
                     </Link>
                 </Div1>
-                <Div2>
+                <Div2 className="mt-7">
                     <li>
-                        <Link href='#projects'>
-                            <NavLink>Projects</NavLink>
+                        <Link href='#projects' className="text-3xl leading-8 hover:text-white hover:opacity-100 hover:cursor-pointer">
+                            Projects
                         </Link>
                     </li>
                     <li>
-                        <Link href='#tech'>
-                            <NavLink>Tech</NavLink>
+                        <Link href='#tech' className="text-3xl leading-8 hover:text-white hover:opacity-100 hover:cursor-pointer">
+                            Tech
                         </Link>
                     </li>
                     <li>
-                        <Link href='#about'>
-                            <NavLink>About</NavLink>
+                        <Link href='#about' className="text-3xl leading-8 hover:text-white hover:opacity-100 hover:cursor-pointer">
+                            About
                         </Link>
                     </li>
                 </Div2>

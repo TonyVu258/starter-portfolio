@@ -6,18 +6,16 @@ import { LeftSection } from './HeroStyles';
 
 const Hero = (props) => (
   <>
-    <Section row nopadding>
+    <Section row='true' nopadding='true'>
       <LeftSection>
-        <SectionTitle main center>
+        <SectionTitle main='true' center='true'>
           Welcome to <br />
           My Personal Portfolio
         </SectionTitle>
         <SectionText>
           The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
         </SectionText>
-        <Button onClick={() => window.location = 'https://google.com'}>
-          Learn More
-        </Button>
+        <Button onClick={props.handleClick}>Learn More</Button>
       </LeftSection>
     </Section>
     {/* <Section row nopadding>
