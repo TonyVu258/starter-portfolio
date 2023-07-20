@@ -18,10 +18,22 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* custom className */
+@layer components {
+  .main {
+    @apply grid grid-cols-5 grid-rows-1 gap-8 p-4 pt-8;
+  }
+
+  .div1 {
+    @apply place-items-stretch flex flex-row content-center;
+  }
+
+  .div2 {
+    @apply place-items-stretch flex justify-around;
+  }
 }
