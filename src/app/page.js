@@ -6,34 +6,37 @@ import BgAnimation from '../components/BackgrooundAnimation/BackgroundAnimation'
 import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import Preloader from '../components/Preloader/Preloader';
-import Pace from "./pace"
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Layout } from '@/layout/Layout'
 import { Section } from '../styles/GlobalComponents';
+import { Router } from 'next/router';
+import 'pace-js';
 
 
 export default function Home() {
-  Pace.on("start", (function () {
-    document.querySelector("#preloader").classList.remove("isdone"), document.querySelector(".loading").classList.remove("isdone")
-})), Pace.on("done", (function () {
-    document.querySelector("#preloader").classList.add("isdone"), document.querySelector(".loading").classList.add("isdone")
-})), document.querySelector("body").classList.contains("pace-done") && (document.querySelector("#preloader").classList.add("isdone"), document.querySelector(".loading").classList.add("isdone")), window.addEventListener("load", (function () {
-    document.querySelector("#preloader").classList.add("isdone"), document.querySelector(".loading").classList.add("isdone"), document.querySelector(".pace-running.pace-running") && document.querySelector(".pace-running.pace-running").classList.remove("pace-running")
-}))
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      Pace.on("start", (function () {
+        document.querySelector("#preloader").classList.remove("isdone")
+        document.querySelector(".loading").classList.remove("isdone")
+      }))
 
-  // const [loading, setLoading] = useState(true);
+      Pace.on("done", (function () {
+        document.querySelector("#preloader").classList.add("isdone")
+        document.querySelector(".loading").classList.add("isdone")
+        document.querySelector("#done").classList.replace("hideX","showX");
+      })) 
+    }
 
-  // useEffect(() => {
-  //   // Simulate a delay to showcase the preloader
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   },500); // Adjust the delay time as needed
-  // }, []);
+    const handleStart = () => {
+      Pace.restart();
+    };
 
+    Router.events.on('routeChangeStart', handleStart);
+  }, []);
   return (
     <>
-      {/* {loading ? <Preloader /> : null} */}
       <Preloader />
       <Layout>
         <Section grid='true'>

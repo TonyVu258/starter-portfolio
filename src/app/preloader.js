@@ -93,8 +93,7 @@ import * from "./pace";
                         document.querySelector("#preloader").classList.add("isdone"), document.querySelector(".loading").classList.add("isdone"), document.querySelector(".pace-running.pace-running") && document.querySelector(".pace-running.pace-running").classList.remove("pace-running")
                     }))
                 },
-                v = t(82806),
-                export default g = function () {
+                g = function () {
                     return o.useEffect((function () {
                         var e = document.querySelector("body");
                         v.QP ? (m(), e.classList.contains("hideX") && e.classList.remove("hideX")) : e.classList.add("hideX")
