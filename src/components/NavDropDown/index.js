@@ -13,7 +13,7 @@ const NavDropDown = (props) => (
       </DropDownIcon>
       <DropDownTextContainer>
         <DropDownItemTitle>Phone</DropDownItemTitle>
-        <DropDownItemDesc>Let's get together and have a chat?'</DropDownItemDesc>
+        <DropDownItemDesc>Lets get together and have a chat?</DropDownItemDesc>
       </DropDownTextContainer>
     </DropDownItem>
     <DropDownItem href="#" target="_blank" rel="noreferrer">
@@ -22,7 +22,7 @@ const NavDropDown = (props) => (
       </DropDownIcon>
       <DropDownTextContainer>
         <DropDownItemTitle>Email</DropDownItemTitle>
-        <DropDownItemDesc>If you want to talk jus send a message and I'll get back</DropDownItemDesc>
+        <DropDownItemDesc>If you want to talk jus send a message and Ill get back</DropDownItemDesc>
       </DropDownTextContainer>
     </DropDownItem>
     <DropDownItem href="#" target="_blank" rel="noreferrer">
